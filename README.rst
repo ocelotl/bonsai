@@ -20,7 +20,8 @@ generate the equivalent formal normative sentence.
 
 This means there are 3 AI models that make up Bonsai:
 
-1. The sentence tokenizer, the model that transforms a document into sentences.
+1. The sentence segmentator, the model that transforms a document into
+   sentences.
 2. The sentence analyzer, the model that analyzes if a sentence is a formal
    normative sentence, an informal normative sentence or a non-normative
    sentence. 
