@@ -6,9 +6,13 @@ name = "pypi"
 [packages]
 spacy = "*"
 bonsai = {file = "."}
+markdown = "*"
+nltk = "*"
 
 [dev-packages]
 pytest = "*"
+ipdb = "*"
+pdbpp = "*"
 
 [requires]
 python_version = "3.11"

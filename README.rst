@@ -35,3 +35,5 @@ First, install `pipenv`. To run the tests, run `pipenv run pytest`. To add a
 new dependency for `bonsai`, run `pipenv install new-dependency`. To add a new
 development dependency for `bonsai`, run `pipenv install -d new-dependency`.
 Add both `Pipfile` and `Pipfile.lock` changes to git.
+
+Run `pipenv run spacy download en_core_web_sm` too.
