@@ -27,3 +27,11 @@ This means there are 3 AI models that make up Bonsai:
    sentence. 
 3. The sentence generator, the model that generates a formal normative sentence
    for an informal normative sentence.
+
+Development
+-----------
+
+First, install `pipenv`. To run the tests, run `pipenv run pytest`. To add a
+new dependency for `bonsai`, run `pipenv install new-dependency`. To add a new
+development dependency for `bonsai`, run `pipenv install -d new-dependency`.
+Add both `Pipfile` and `Pipfile.lock` changes to git.
