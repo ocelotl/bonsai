@@ -8,6 +8,8 @@ spacy = "*"
 bonsai = {file = "."}
 markdown = "*"
 nltk = "*"
+torch = "*"
+transformers = {extras = ["torch"], version = "*"}
 
 [dev-packages]
 pytest = "*"
