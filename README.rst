@@ -22,9 +22,9 @@ This means there are 3 AI models that make up Bonsai:
 
 1. The sentence segmentator, the model that transforms a document into
    sentences.
-2. The sentence analyzer, the model that analyzes if a sentence is a formal
+2. The sentence classifier, the model that classifies a sentence into a formal
    normative sentence, an informal normative sentence or a non-normative
-   sentence. 
+   sentence.
 3. The sentence generator, the model that generates a formal normative sentence
    for an informal normative sentence.
 
