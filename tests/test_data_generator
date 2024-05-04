@@ -1,0 +1,12 @@
+# This file is disabled in order to not trigger actual data generation when
+# running tests.
+
+from bonsai.data_generator import generate_sentences
+from pathlib import Path
+
+
+def test_generate_sentences():
+
+    generate_sentences("NON", 2, 1, 5, Path("/home/tigre/sandbox"))
+    generate_sentences("MUST", 2, 1, 5, Path("/home/tigre/sandbox"))
+    generate_sentences("MAY", 2, 1, 5, Path("/home/tigre/sandbox"))

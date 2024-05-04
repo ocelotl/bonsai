@@ -10,6 +10,7 @@ markdown = "*"
 nltk = "*"
 torch = "*"
 transformers = {extras = ["torch"], version = "*"}
+requests = "*"
 
 [dev-packages]
 pytest = "*"

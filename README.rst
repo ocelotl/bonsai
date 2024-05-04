@@ -18,8 +18,10 @@ normative sentence (formal or informal) or not.
 If an informal normative sentence is found, then another model is used to
 generate the equivalent formal normative sentence.
 
-This means there are 3 AI models that make up Bonsai:
+Bonsai consists of 4 components:
 
+0. The data generator, the component that uses ChatGPT to generate normative
+   and non-normative sentences and clean them up afterwards.
 1. The sentence segmentator, the model that transforms a document into
    sentences.
 2. The sentence analyzer, the model that analyzes if a sentence is a formal
