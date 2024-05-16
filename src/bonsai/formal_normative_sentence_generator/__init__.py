@@ -1,24 +1,26 @@
 from transformers import (
-    DistilBertTokenizer,
-    DistilBertForSequenceClassification
+    AutoTokenizer,
+    AutoModelForSeq2SeqLM,
 )
-from torch import no_grad, argmax
-from os.path import abspath, dirname, join
+from pathlib import Path
 
-file_path = dirname(abspath(__file__))
-
-# Load model and tokenizer from disk
-_model = DistilBertForSequenceClassification.from_pretrained(
-    join(file_path, "model")
+formal_normative_sentence_generator_path = Path(
+    "/home/tigre/github/ocelotl/bonsai/src/bonsai/"
+    "formal_normative_sentence_generator/data/model"
 )
-_tokenizer = DistilBertTokenizer.from_pretrained("distilbert-base-uncased")
+loaded_model = AutoModelForSeq2SeqLM.from_pretrained(
+    formal_normative_sentence_generator_path,
+)
+loaded_tokenizer = AutoTokenizer.from_pretrained(
+    formal_normative_sentence_generator_path
+)
 
 
-def classify_sentence(sentence):
+def generate_sentence(input_sentence: str):
 
-    # Perform inference
-    with no_grad():
-        output = _model(**_tokenizer(sentence, return_tensors='pt'))
+    inputs = loaded_tokenizer(input_sentence, return_tensors="pt")
+    outputs = loaded_model.generate(**inputs)
+    return loaded_tokenizer.decode(outputs[0], skip_special_tokens=True)
 
-    # Get the predicted class
-    return argmax(output.logits, dim=1).item()
+
+print(generate_sentence("It is mandatory to do that"))
